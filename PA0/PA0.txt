@@ -1,0 +1,2 @@
+1) Ubuntu 20.04 dual boot available on PC with a working ROS-Noetic installation
+2) I am familiar with Git
