@@ -1,0 +1,10 @@
+std_msgs/Header header
+float64 Latitude
+float64 Longitude
+string  LatitudeRaw
+string  LongitudeRaw
+float64 Altitude
+float64 Utm_easting
+float64 Utm_northing
+int32   Zone
+uint8   ZoneLetter
