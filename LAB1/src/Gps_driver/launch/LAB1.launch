@@ -1,0 +1,19 @@
+<!--Unable to make this publish a dynamic bag file name based on the current time, rosbag module used-->
+<launch>
+
+  <!-- Set Simulation time -->
+  <param name="/use_sim_time" value="true"/> <!-- set sim time to true only when you get a clock topic(maybe bag file or some simulation)-->
+<!--  <param name="start_time" command="date +'%d-%m-%Y_%Ih%Mm%S'"/>-->
+
+  <include file="$(find LAB1)/launch/LAB1.launch"/>
+  <node name="gps_driver" pkg="LAB1" type="gps_driver.py" output="log">
+  </node>
+  <node pkg="rosbag" type="record" name="rosbag_record_GPS_Data"
+        args="record -o /RTK_GPS/Location_data -O $(find LAB1)/data/GPS_Data.bag" />
+</launch>
+
+
+
+
+
+
